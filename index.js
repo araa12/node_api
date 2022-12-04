@@ -59,7 +59,7 @@ app.post("/order", async (req, res) => {
         for (var i = 0; i < orderItemsModel.length; i++) {
             console.log(orderItemsModel[i]); 
             const orderItems = orderItemsModel[i];
-            var sql2 = `INSERT INTO ORDER_ITEMS (ORDER_ID, PRODUCT_NAME, PRODUCT_UNIT,PRODUCT_UNIT_PRICE,QUANTITY,TOTAL,SORT_NUMBER)  VALUES ("${orderID}","${orderItems["productModel"]["productName"]}", "${orderItems["productModel"]["unit"]}", "${orderItems["productModel"]["price"]}", "${orderItems["quantity"]}","${orderItems["total"]}","${orderItems["sortNumber"]}")`; 
+            var sql2 = `INSERT INTO ORDER_ITEMS (ORDER_ID, PRODUCT_NAME, PRODUCT_UNIT,PRODUCT_UNIT_PRICE,QUANTITY,TOTAL,SORT_NUMBER)  VALUES ("${orderID}","${orderItems["productName"]}", "${orderItems["unit"]}", "${orderItems["unitPrice"]}", "${orderItems["quantity"]}","${orderItems["total"]}","${orderItems["sortNumber"]}")`; 
 
           }
         
